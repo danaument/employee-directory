@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles.scss';
+import Header from './components/Header';
+import Table from './components/Table';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Table />
   </React.StrictMode>,
   document.getElementById('root')
 );
