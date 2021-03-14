@@ -23,33 +23,44 @@ export default class Table extends Component {
         this.setState({
           results: res.data.results,
           displayMsg: "Showing random results from randomuser.me",
-          query: ""
+          query: "",
         });
         console.log(this.state.results);
       })
       .catch((err) => console.log(err));
   };
 
-  handleSearch = (query) => {
-    query = query.toLowerCase();
+  handleSearch = () => {
+    const query = this.state.query.toLowerCase();
     const filteredResults = this.state.results.filter((person) =>
       `${person.name.first}${person.name.last}`.toLowerCase().includes(query)
     );
     this.setState({
       results: filteredResults,
       displayMsg: `Showing results for "${query}"`,
-      query: ""
+      query: "",
     });
   };
 
-  //   handleSort = (query) => {
-  //       const sortedResults = this.state.results.sort(person =.)
-  //   }
+  handleSort = () => {
+    const sortedResults = this.state.results.sort(
+      (a, b) => {
+          return a.dob.age - b.dob.age;
+      }
+    );
+    console.log("Sorting results by age");
+    this.setState({
+      results: sortedResults,
+      displayMsg: `Showing results sorted by age`,
+      query: "",
+    });
+  };
 
-  handleQueryChange = event => {
+  handleQueryChange = (event) => {
     const value = event.target.value;
     this.setState({
-      ...this.state, query: value
+      ...this.state,
+      query: value,
     });
   };
 
@@ -62,7 +73,7 @@ export default class Table extends Component {
             query={this.state.query}
             handleQueryChange={this.handleQueryChange}
           />
-          <Sort />
+          <Sort handleSort={this.handleSort} />
         </Search>
 
         <Results displayMsg={this.state.displayMsg}>
