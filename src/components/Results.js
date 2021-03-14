@@ -1,13 +1,12 @@
-import React from 'react';
-import PersonCard from './PersonCard';
+import React from "react";
 
 function Results(props) {
-    return (
-        <div className="container">
-            <PersonCard />
-            <p>p tag from results</p>
-        </div>
-    )
+  return (
+    <div>
+      <h3 className="p-2">{props.displayMsg}</h3>
+      <div className="columns is-multiline px-6">{props.children}</div>
+    </div>
+  );
 }
 
 export default Results;
