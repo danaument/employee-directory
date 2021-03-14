@@ -25,7 +25,6 @@ export default class Table extends Component {
           displayMsg: "Showing random results from randomuser.me",
           query: "",
         });
-        console.log(this.state.results);
       })
       .catch((err) => console.log(err));
   };
