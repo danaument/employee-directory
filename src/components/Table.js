@@ -23,6 +23,7 @@ export default class Table extends Component {
         this.setState({
           results: res.data.results,
           displayMsg: "Showing random results from randomuser.me",
+          query: ""
         });
         console.log(this.state.results);
       })
@@ -37,12 +38,20 @@ export default class Table extends Component {
     this.setState({
       results: filteredResults,
       displayMsg: `Showing results for "${query}"`,
+      query: ""
     });
   };
 
   //   handleSort = (query) => {
   //       const sortedResults = this.state.results.sort(person =.)
   //   }
+
+  handleQueryChange = event => {
+    const value = event.target.value;
+    this.setState({
+      ...this.state, query: value
+    });
+  };
 
   render() {
     return (
