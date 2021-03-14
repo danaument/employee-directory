@@ -25,7 +25,7 @@ Main Features:
 ## Links
 
 * Project Repo: [Repository](https://github.com/danaument/employee-directory)
-* Deployed Application: [Employee Directory](https://Employee-Directory-a-la-pwa.herokuapp.com/)
+* Deployed Application: [Employee Directory](https://emp-directory-react.herokuapp.com/)
 
 ## Screenshots
 
@@ -43,12 +43,12 @@ Main Features:
 ## Contributors
 Dan Aument
 
-The front-end components of this project were provided by The Coding Boot Camp at UT Austin in partnership with Trilogy Education Services.
+This project was created with create-react-app.
 
 
 ## Notes
 
-This project was my first foray into making a progressive web app - or at least to provide some persistent utility with an intermittent internet connection.
+This project was my first foray into making a React app.  React is great!  Working with state in React without modern contextAPI/hooks is a nuisance, and I am very glad that I have since learned how to use them.
 
 ## License
 
