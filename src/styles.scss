@@ -23,3 +23,10 @@ $input-shadow: none;
 
 // Import the rest of Bulma
 @import "../node_modules/bulma";
+
+.hero {
+    background-color: $purple;
+    .subtitle {
+        color: $beige-lighter;
+    }
+}

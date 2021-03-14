@@ -9,8 +9,8 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <section className="hero">
-          <div className="hero-body">
+        <section className="hero mb-6">
+          <div className="hero-body container is-max-desktop ">
             <p className="title">Employee Directory</p>
             <p className="subtitle">A React Demo App by Dan Aument</p>
           </div>

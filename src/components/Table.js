@@ -66,7 +66,7 @@ export default class Table extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container is-max-desktop">
         <Search>
           <Filter
             handleSearch={this.handleSearch}
